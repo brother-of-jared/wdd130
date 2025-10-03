@@ -68,7 +68,7 @@ nav, p, section, article {
     height: auto;
 }
 
-h1 {
+.hero h1 {
     position: absolute;
     top: 20px;
     width: 100%;
@@ -165,7 +165,106 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: black;
-    border-top: 5px solid var(--primary-color);
+    border-top: 5px solid var(--accent1-color);
+}
+
+/* For Contact Page */
+.about-main {
+    padding: 1rem 0;
+    background-color: var(--secondary-color);
+}
+
+.company-details-wrapper {
+    text-align: center;
+}
+
+.company-details-wrapper p, h1 {
+    margin: 0 0 0.3rem 0;
+    padding: 0;
+}
+
+.company-details-wrapper p {
+    font-size: small;
+    font-weight: 700;
+}
+
+.map-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem;
+}
+
+.contact-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: .5rem;
+}
+
+.contact-form input {
+    padding: .3rem;
+}
+
+.contact-form p {
+    margin: 0;
+    padding: 0;
+    grid-row: 3/6;
+    align-content: center;
+}
+
+.contact-form textarea {
+    width: 100%;
+    padding: .3rem;
+}
+
+.contact-form button {
+    padding: .3rem;
+    background-color: var(--primary-color);
+    font-size: small;
+    font-weight: 700;
+    border: 1px solid var(--accent1-color);
+    border-radius: 5px;
+}
+
+.employee-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto 1fr;
+    justify-items: center;
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+    border: 3px ridge var(--primary-color);
+}
+
+.employee-section h2 {
+    grid-column: span 3;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.employee-section img {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.employee-section figure {
+    font-size: small;
+    text-align: center;
+}
+
+.contact-form button:hover {
+    background-color: #00ddcf;
+}
+
+.map-wrapper iframe {
+    border: 3px ridge var(--accent1-color);
 }
