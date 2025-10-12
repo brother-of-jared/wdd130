@@ -1,10 +1,10 @@
 :root {
     --primary-color: #00b6aa;
     --secondary-color: #F8E6C9;
-    --accent1-color: #333333;
-    --accent2-color: #fb0001;
-    --heading-font: "Times New Roman", Georgia, serif;
-    --body-font: Arial, Helvetica, sans-serif;
+    --accent1-color: #f5b335;
+    --accent2-color: #a7112a;
+    --heading-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --body-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 * {
@@ -15,16 +15,23 @@
 
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
+    background: linear-gradient(180deg, black, #383838);
 }
 
 header, main, footer {
-    width: 840px;
     margin: 0 auto;
 }
 
-header {
+header, footer {
     background-color: var(--primary-color);
+}
+
+.header-wrapper, .footer-wrapper {
+    margin: 0 auto;
+}
+
+.header-wrapper {
+    max-width: 1140px;
     display: grid;
     grid-template-columns: 120px 1fr;
     align-items: center;
@@ -35,6 +42,10 @@ header img {
     width: 100px;
 }
 
+main {
+    max-width: 1140px;
+}
+
 h1, h2 {
     font-family: var(--heading-font);
     color: black;
@@ -43,6 +54,19 @@ h1, h2 {
 nav, p, section, article {
     margin: 16px;
     padding: 8px;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.navigation a {
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 .socialmedia {
@@ -58,17 +82,194 @@ nav, p, section, article {
     width: 30px;
 }
 
-.hero {
+footer {
+    align-items: center;
+    border-top: 5px solid black;
+}
+
+.footer-wrapper {
+    max-width: 1140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* For Home Page */
+#home-main {
+    max-width: 100%;
+}
+
+.home-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.home-hero img {
+    width: 100%;
+}
+
+.h-hero-heading {
+    margin-top: -8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    padding: 2rem;
+}
+
+.h-hero-heading h1 {
+    font-family: var(--heading-font);
+    color: white;
+    text-transform: uppercase;
+}
+
+.h-hero-heading p {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+}
+
+.h-hero-heading a {
+    background-color: var(--accent2-color);
+    padding: .5rem 1.5rem;
+    margin-top: .3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    border-radius: 40px;
+}
+
+.h-hero-heading a:hover {
+    background-color: #d41636;
+}
+
+.offer-section {
+    max-width: 1140px;
+    margin: 0 auto 3rem auto;
+}
+
+.offer-grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.offer-section h2 {
+    color: var(--accent1-color);
+    text-transform: uppercase;
+    margin: 2rem 0;
+}
+
+.offer-section figure {
+    text-align: center;
+    color: white;
+}
+
+.offer-section figcaption {
+    margin: .5rem 0;
+    font-weight: 600;
+    color: var(--accent1-color);
+}
+
+.offer-section img {
+    width: 80%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    box-shadow: 0 0 10px white;
+}
+
+.offer-section p {
+    margin: 0;
+    padding: 0;
+}
+
+.purpose-section {
+    max-width: 1140px;
+    margin: 0 auto 3rem auto;
     position: relative;
 }
 
-.hero img {
+.purpose-heading-wrapper {
+    width: 50%;
+    position:absolute;
+    right: 5%;
+    align-self: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    box-shadow: 0 0 10px var(--accent1-color);
+    border: 1px solid var(--accent1-color);
+}
+
+.purpose-section h2 {
+    color: var(--accent1-color);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.purpose-section p {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.purpose-section img {
+    width: 100%;
+}
+
+.newsletter-section {
+    text-align: center;
+    color: white;
+    max-width: 1140px;
+    margin: 0 auto 3rem auto;
+}
+
+.newsletter-section h2 {
+    color: var(--accent1-color);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.newsletter-section p {
+    margin: 0 0 1rem 0;
+    padding: 0;
+    font-weight: 500;
+}
+
+.newsletter-form {
+    display: grid;
+    justify-items: center;
+    gap: .5rem;
+}
+
+.newsletter-form input {
+    padding: .3rem;
+}
+
+.newsletter-form button {
+    background-color: var(--accent2-color);
+    padding: .5rem 1.5rem;
+    margin-top: .3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 40px;
+}
+/* For About Page */
+.about-hero {
+    position: relative;
+}
+
+.about-hero img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-.hero h1 {
+.about-hero h1 {
     position: absolute;
     top: 20px;
     width: 100%;
@@ -76,16 +277,17 @@ nav, p, section, article {
     text-align: center;
     opacity: 0.7;
     background-color: var(--accent1-color);
-    color: white;
+    color: black;
+    text-transform: uppercase;
 }
 
-article {
+.about-hero article {
     position: absolute;
     bottom: 0;
     background-color: var(--secondary-color);
 }
 
-.hero article img {
+.about-hero article img {
     float: right;
     width: 125px;
     height: 125px;
@@ -93,31 +295,21 @@ article {
     margin: 8px;
 }
 
-.hero article p {
+.about-hero article p {
     margin: 8px;
     padding: 0;
 }
 
-.navigation {
-    display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-}
-
-.navigation a {
-    color: black;
-    font-weight: 700;
-    text-decoration: none;
-}
-
 .history-section, .adventure-section {
-    border: 5px solid var(--primary-color);
-    background-color: var(--secondary-color);
+    padding: 0;
 }
 
 .history-section h2 {
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+    background-color: var(--accent1-color);
+    padding: .3rem;
+    text-transform: uppercase;
 }
 
 .history-content-wrapper {
@@ -135,6 +327,7 @@ article {
 .history-content-wrapper p {
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 .adventure-section {
@@ -145,35 +338,32 @@ article {
 }
 
 .adventure-section h2 {
+    width: 100%;
     grid-column: span 5;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+    background-color: var(--accent1-color);
+    padding: .3rem;
+    text-transform: uppercase;
 }
 
 .adventure-section img {
     width: 140px;
     height: 100px;
     object-fit: cover;
+    box-shadow: 0 0 5px white;
 }
 
 .adventure-section figure {
     font-size:x-small;
     text-align: center;
-}
-
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--primary-color);
-    color: black;
-    border-top: 5px solid var(--accent1-color);
+    color: white;
 }
 
 /* For Contact Page */
-.about-main {
+.contact-main {
+    max-width: 1140px;
     padding: 1rem 0;
-    background-color: var(--secondary-color);
 }
 
 .contact-section {
@@ -183,13 +373,18 @@ footer {
     gap: 1rem;
 }
 
+.contact-section h1 {
+    text-transform: uppercase;
+}
+
 .company-details-wrapper {
     text-align: center;
 }
 
-.company-details-wrapper p, h1 {
+.company-details-wrapper p, .company-details-wrapper h1 {
     margin: 0 0 0.3rem 0;
     padding: 0;
+    color: white;
 }
 
 .company-details-wrapper p {
@@ -201,6 +396,12 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+}
+
+.contact-form-wrapper {
+    color: white;
+    border: 2px solid white;
+    border-radius: .5rem;
 }
 
 .contact-form {
@@ -230,15 +431,17 @@ footer {
 .contact-form textarea {
     width: 100%;
     padding: .3rem;
+    margin-top: .3rem;
 }
 
 .contact-form button {
-    padding: .3rem;
-    background-color: var(--primary-color);
+    padding: .5rem;
+    background-color: var(--accent2-color);
     font-size: small;
     font-weight: 700;
-    border: 1px solid var(--accent1-color);
+    border: none;
     border-radius: 5px;
+    color: white;
 }
 
 .employee-section {
@@ -246,21 +449,24 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto 1fr;
     justify-items: center;
-    margin-bottom: 0;
-    padding-bottom: 1rem;
-    border: 3px ridge var(--primary-color);
+    color: white;
 }
 
 .employee-section h2 {
+    width: 100%;
     grid-column: span 3;
     text-align: center;
     margin-bottom: 1rem;
+    background-color: var(--accent1-color);
+    padding: .3rem;
+    text-transform: uppercase;
 }
 
 .employee-section img {
     width: 180px;
     height: 220px;
     object-fit: cover;
+    box-shadow: 0 0 5px white;
 }
 
 .employee-section figure {
@@ -269,11 +475,11 @@ footer {
 }
 
 .contact-form button:hover {
-    background-color: #00ddcf;
+    background-color: #d41636;
 }
 
 .map-wrapper iframe {
     width: 100%;
     height: 100%;
-    border: 3px ridge var(--accent1-color);
+    border: 3px ridge white;
 }
