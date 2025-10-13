@@ -171,7 +171,7 @@ footer {
     width: 80%;
     aspect-ratio: 1/1;
     object-fit: cover;
-    box-shadow: 0 0 10px white;
+    box-shadow: 0 0 5px white;
 }
 
 .package-desc {
@@ -405,7 +405,6 @@ footer {
     max-width: 600px;
     margin: 0 auto 1rem auto;
     font-weight: 500;
-
 }
 
 .trips-cta-section a {
@@ -455,6 +454,7 @@ footer {
     width: 250px;
     height: 250px;
     object-fit: cover;
+    box-shadow: 0 0 5px white;
 }
 
 .trips-title {
@@ -550,7 +550,6 @@ footer {
 .contact-form-wrapper {
     color: white;
     border: 2px solid white;
-    border-radius: .5rem;
 }
 
 .contact-form {
@@ -589,7 +588,6 @@ footer {
     font-size: small;
     font-weight: 700;
     border: none;
-    border-radius: 5px;
     color: white;
 }
 
